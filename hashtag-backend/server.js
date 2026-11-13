@@ -15,17 +15,17 @@ const PORT = process.env.PORT || 3000;
 
 app.use(helmet());
 
+
 const allowedOrigins = [
     "http://127.0.0.1:5500",
     "http://localhost:5500",
-    "http://192.168.0.172:5500"
+    "http://192.168.0.172:5500",
+    "https://hashtag.deeclercq.workers.dev"
 ];
 
 app.use(
     cors({
         origin: (origin, callback) => {
-            // Allow requests without an Origin header,
-            // such as local server-to-server requests.
             if (!origin || allowedOrigins.includes(origin)) {
                 return callback(null, true);
             }
@@ -39,6 +39,7 @@ app.use(
         optionsSuccessStatus: 204
     })
 );
+
 
 app.use(express.json({ limit: "10kb" }));
 
@@ -96,10 +97,11 @@ async function startServer() {
     console.log("PostgreSQL connected successfully!");
     console.log(`Database: ${database.database_name}`);
 
-    app.listen(PORT, () => {
-      console.log(`Hashtag backend running at http://localhost:${PORT}`);
-    });
-  } catch (error) {
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
+
+} catch (error) {
     console.error("Unable to connect to PostgreSQL:", error.message);
     process.exit(1);
   }
