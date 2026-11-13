@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b13">
+  <meta name="description" content="Support Hashtag's gaming dream. Every contribution brings the goal closer.">
+  <title>Hashtag — Help Me Make It Happen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+  <link rel="stylesheet" href="css/atmosphere.css">
+  <script src="js/atmosphere.js" defer></script>
+  
+
+</head>
+<body>
+  <div class="hashtag-atmosphere" aria-hidden="true">
+  <canvas id="lightfall-canvas"></canvas>
+
+  <div class="vice-artwork">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice"
+         xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="vice-sky" x1="0" y1="0" x2="0.8" y2="1">
+          <stop offset="0%" stop-color="#fa5d9b"/>
+          <stop offset="48%" stop-color="#a34e9b"/>
+          <stop offset="100%" stop-color="#24204c"/>
+        </linearGradient>
+        <linearGradient id="vice-water" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#f477a4"/>
+          <stop offset="100%" stop-color="#292452"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Sunset -->
+      <circle cx="1050" cy="360" r="190" fill="#ff9a85" opacity=".8"/>
+
+      <!-- Distant city skyline -->
+      <path d="M0 570 L0 480 65 480 65 420 115 420 115 490
+        170 490 170 390 220 390 220 470 275 470 275 430
+        330 430 330 510 390 510 390 455 450 455 450 520
+        510 520 510 450 565 450 565 520 630 520 630 470
+        690 470 690 530 760 530 760 450 815 450 815 500
+        880 500 880 440 930 440 930 520 990 520 990 460
+        1050 460 1050 530 1120 530 1120 420 1180 420
+        1180 510 1240 510 1240 455 1300 455 1300 520
+        1370 520 1370 465 1440 465 1440 900 0 900Z"
+        fill="#19152f" opacity=".8"/>
+
+      <!-- Water and sunset reflections -->
+      <path d="M0 650 Q360 620 720 655 T1440 640 L1440 900 L0 900Z"
+        fill="url(#vice-water)" opacity=".45"/>
+      <g stroke="#ffb1bd" stroke-width="4" opacity=".28">
+        <path d="M820 690 H1250"/>
+        <path d="M900 720 H1190"/>
+        <path d="M760 750 H1300"/>
+        <path d="M960 785 H1160"/>
+      </g>
+
+      <!-- Palm tree on the left -->
+      <g fill="none" stroke="#120f26" stroke-linecap="round">
+        <path d="M180 900 Q220 620 260 320" stroke-width="19"/>
+        <path d="M260 320 Q130 210 55 250 Q145 255 220 330"
+          stroke-width="13"/>
+        <path d="M260 320 Q260 190 350 150 Q315 240 280 330"
+          stroke-width="13"/>
+        <path d="M260 320 Q410 235 490 280 Q370 290 275 345"
+          stroke-width="13"/>
+        <path d="M260 320 Q120 320 80 410 Q170 370 275 350"
+          stroke-width="13"/>
+        <path d="M260 320 Q330 360 370 445 Q300 395 255 355"
+          stroke-width="13"/>
+      </g>
+
+      <!-- Palm tree on the right -->
+      <g fill="none" stroke="#120f26" stroke-linecap="round">
+        <path d="M1280 900 Q1230 620 1190 300" stroke-width="20"/>
+        <path d="M1190 300 Q1060 190 990 235 Q1090 245 1175 320"
+          stroke-width="14"/>
+        <path d="M1190 300 Q1200 175 1300 130 Q1260 235 1210 315"
+          stroke-width="14"/>
+        <path d="M1190 300 Q1340 225 1415 275 Q1290 285 1205 335"
+          stroke-width="14"/>
+        <path d="M1190 300 Q1070 330 1040 410 Q1125 365 1200 340"
+          stroke-width="14"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="atmosphere-shade"></div>
+</div>
+
+
+  <header class="navbar">
+    <a class="brand" href="index.html"><span>#</span> HASHTAG</a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links">
+      <a class="active" href="index.html">Home</a>
+      <a href="contact.html">Contact Me</a>
+      <a href="support.html">Support</a>
+      <a class="btn btn-primary nav-cta" href="support.html">Support Me ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="live-dot"></span> A LITTLE SUPPORT. A BIG DREAM.</span>
+        <h1>Help Me Make<br>It <span class="gradient-text">Happen.</span></h1>
+        <p>Every little contribution brings me closer to my goal. If you can support, I'd genuinely appreciate it.</p>
+        <div class="hero-actions">
+          <a href="support.html" class="btn btn-primary">Support My Goal <span>↗</span></a>
+          <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+        </div>
+        <div class="hero-note">
+          <div class="avatar-stack">
+            <span>❤️</span><span>🎮</span><span>✨</span>
+          </div>
+          <span>Every contribution makes a difference.</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="gaming-card">
+          <div class="gaming-top">
+            <span class="eyebrow">THE NEXT LEVEL</span>
+            <span class="status-tag">MY GOAL</span>
+          </div>
+          <div class="controller">🎮</div>
+          <h2>Dream big.<br><span class="gradient-text">Play bigger.</span></h2>
+          <div class="mini-progress">
+            <div class="mini-progress-top">
+              <span>Fundraising goal</span>
+              <strong data-progress-percent>35%</strong>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" data-progress-bar></div>
+            </div>
+            <div class="mini-progress-bottom">
+              <span data-raised>$385 raised</span>
+              <span data-target>$1,100 goal</span>
+            </div>
+          </div>
+          <div class="gaming-decoration"># HASHTAG</div>
+        </div>
+        <span class="floating-icon float-one">✦</span>
+        <span class="floating-icon float-two">⚡</span>
+        <span class="floating-icon float-three">🎯</span>
+      </div>
+    </section>
+
+    <section class="stats-strip container">
+      <div><span class="stat-icon">🎯</span><div><strong data-target>$1,100</strong><small>Total goal</small></div></div>
+      <div><span class="stat-icon">💜</span><div><strong data-raised>$385</strong><small>Amount raised</small></div></div>
+      <div><span class="stat-icon">🚀</span><div><strong data-remaining>$715</strong><small>Still to go</small></div></div>
+    </section>
+
+
+<section class="section container" id="goal">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">THE DREAM I'M CHASING</span>
+      <h2>Three goals. <span class="gradient-text">One dream.</span></h2>
+      <p>Here's what your support will help me get.</p>
+    </div>
+    <a href="support.html" class="text-link">Be part of it ↗</a>
+  </div>
+
+  <div class="product-grid">
+
+    <article class="product-card">
+  <div class="product-image ps-image">
+  <img src="images/ps5.jpg"
+       alt="PlayStation 5 Pro console and controller">
+</div>
+      <div class="product-info">
+        <div>
+          <h3>PlayStation 5 Pro</h3>
+          <p>For the ultimate gaming experience.</p>
+        </div>
+        <strong class="product-price">$899.00</strong>
+      </div>
+      <div class="item-progress">
+        <div class="item-progress-heading">
+          <span>PS5 Fundraising</span>
+          <strong data-item-percent="ps5">0%</strong>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" data-item-bar="ps5"></div>
+        </div>
+        <div class="item-progress-footer">
+          <span><strong data-item-raised="ps5">$0.00</strong> raised</span>
+          <span>Goal: $899.00</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card">
+<div class="product-image gta-image">
+  <img src="images/gta6.jpg"
+       alt="Grand Theft Auto VI promotional artwork">
+</div>      
+<div class="product-info">
+        <div>
+          <h3>Grand Theft Auto VI</h3>
+          <p>Ready for the next big adventure.</p>
+        </div>
+        <strong class="product-price">$79.99</strong>
+      </div>
+      <div class="item-progress">
+        <div class="item-progress-heading">
+          <span>GTA VI Fundraising</span>
+          <strong data-item-percent="gta6">0%</strong>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" data-item-bar="gta6"></div>
+        </div>
+        <div class="item-progress-footer">
+          <span><strong data-item-raised="gta6">$0.00</strong> raised</span>
+          <span>Goal: $79.99</span>
+        </div>
+      </div>
+    </article>
+
+
+<article class="product-card">
+<div class="product-image monitor-image">
+  <img src="images/monitor.webp"
+       alt="Samsung Odyssey G7 G70D 4K gaming monitor">
+</div>
+
+  <div class="product-info">
+    <div>
+      <h3>Samsung Odyssey G7 G70D</h3>
+      <p>A good display for the setup</p>
+    </div>
+    <strong class="product-price">$499.99</strong>
+  </div>
+
+  <div class="item-progress">
+    <div class="item-progress-heading">
+      <span>Monitor Fundraising</span>
+      <strong data-item-percent="monitor">0%</strong>
+    </div>
+
+    <div class="progress-track">
+      <div class="progress-fill" data-item-bar="monitor"></div>
+    </div>
+
+    <div class="item-progress-footer">
+      <span><strong data-item-raised="monitor">$0.00</strong> raised</span>
+      <span>Goal: $499.99</span>
+    </div>
+  </div>
+</article>
+
+  </div>
+</section>
+
+    <section class="section container">
+      <div class="fund-card">
+        <div class="fund-content">
+          <span class="eyebrow">THE JOURNEY SO FAR</span>
+          <h2>Every dollar gets<br>me <span class="gradient-text">closer.</span></h2>
+          <p>Your support, no matter the size, helps make this dream possible.</p>
+          <a href="support.html" class="btn btn-primary">Contribute Now ↗</a>
+        </div>
+        <div class="fund-progress">
+          <div class="fund-circle">
+            <div>
+              <strong data-progress-percent>35%</strong>
+              <small>COMPLETED</small>
+            </div>
+          </div>
+          <div class="fund-details">
+            <div><span>Target</span><strong data-target>$1,100</strong></div>
+            <div><span>Raised</span><strong data-raised>$385</strong></div>
+            <div><span>Remaining</span><strong data-remaining>$715</strong></div>
+          </div>
+          <div class="progress-track large-track"><div class="progress-fill" data-progress-bar></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container appreciation">
+      <div class="appreciation-icon">💜</div>
+      <span class="eyebrow">A QUICK THANK YOU</span>
+      <h2>Can't contribute? <span class="gradient-text">No worries.</span></h2>
+      <p>Sharing this page also means a lot. Thank you for taking the time to visit and being part of the journey.</p>
+      <button class="btn btn-outline" id="share-button">↗ Share This Page</button>
+      <p class="share-feedback" id="share-feedback" role="status"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand" href="index.html"><span>#</span> HASHTAG</a>
+        <p>Big dreams. Small steps. Endless possibilities.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact Me</a>
+        <a href="support.html">Support</a>
+      </div>
+      <div class="social-links">
+<a href="mailto:deeclercq@gmail.com?subject=Hello%20Hashtag">
+  Email Hashtag ↗
+</a> 
+<a
+    href="https://discord.com/users/YOUR_USER_ID"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="social-link"
+  >
+    Connect on Discord ↗
+  </a> 
+    </div>
+    
+    </div>
+    <div class="container copyright">
+      <span>© <span data-year></span> Hashtag. All rights reserved.</span>
+    </div>
+  </footer>
+</body>
+</html>

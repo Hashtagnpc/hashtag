@@ -1,0 +1,8 @@
+.env
+.env.*
+!.env.example
+node_modules/
+*.dump
+*.sql
+hashtag-backend/node_modules/
+hashtag-backend/.env

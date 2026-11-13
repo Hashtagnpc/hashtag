@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b13">
+  <title>Contact Hashtag — Let's Build Something</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+  <link rel="stylesheet" href="css/atmosphere.css">
+  <script src="js/atmosphere.js" defer></script>
+
+</head>
+<body>
+
+  <div class="hashtag-atmosphere" aria-hidden="true">
+  <canvas id="lightfall-canvas"></canvas>
+
+  <div class="vice-artwork">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice"
+         xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="vice-sky" x1="0" y1="0" x2="0.8" y2="1">
+          <stop offset="0%" stop-color="#fa5d9b"/>
+          <stop offset="48%" stop-color="#a34e9b"/>
+          <stop offset="100%" stop-color="#24204c"/>
+        </linearGradient>
+        <linearGradient id="vice-water" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#f477a4"/>
+          <stop offset="100%" stop-color="#292452"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Sunset -->
+      <circle cx="1050" cy="360" r="190" fill="#ff9a85" opacity=".8"/>
+
+      <!-- Distant city skyline -->
+      <path d="M0 570 L0 480 65 480 65 420 115 420 115 490
+        170 490 170 390 220 390 220 470 275 470 275 430
+        330 430 330 510 390 510 390 455 450 455 450 520
+        510 520 510 450 565 450 565 520 630 520 630 470
+        690 470 690 530 760 530 760 450 815 450 815 500
+        880 500 880 440 930 440 930 520 990 520 990 460
+        1050 460 1050 530 1120 530 1120 420 1180 420
+        1180 510 1240 510 1240 455 1300 455 1300 520
+        1370 520 1370 465 1440 465 1440 900 0 900Z"
+        fill="#19152f" opacity=".8"/>
+
+      <!-- Water and sunset reflections -->
+      <path d="M0 650 Q360 620 720 655 T1440 640 L1440 900 L0 900Z"
+        fill="url(#vice-water)" opacity=".45"/>
+      <g stroke="#ffb1bd" stroke-width="4" opacity=".28">
+        <path d="M820 690 H1250"/>
+        <path d="M900 720 H1190"/>
+        <path d="M760 750 H1300"/>
+        <path d="M960 785 H1160"/>
+      </g>
+
+      <!-- Palm tree on the left -->
+      <g fill="none" stroke="#120f26" stroke-linecap="round">
+        <path d="M180 900 Q220 620 260 320" stroke-width="19"/>
+        <path d="M260 320 Q130 210 55 250 Q145 255 220 330"
+          stroke-width="13"/>
+        <path d="M260 320 Q260 190 350 150 Q315 240 280 330"
+          stroke-width="13"/>
+        <path d="M260 320 Q410 235 490 280 Q370 290 275 345"
+          stroke-width="13"/>
+        <path d="M260 320 Q120 320 80 410 Q170 370 275 350"
+          stroke-width="13"/>
+        <path d="M260 320 Q330 360 370 445 Q300 395 255 355"
+          stroke-width="13"/>
+      </g>
+
+      <!-- Palm tree on the right -->
+      <g fill="none" stroke="#120f26" stroke-linecap="round">
+        <path d="M1280 900 Q1230 620 1190 300" stroke-width="20"/>
+        <path d="M1190 300 Q1060 190 990 235 Q1090 245 1175 320"
+          stroke-width="14"/>
+        <path d="M1190 300 Q1200 175 1300 130 Q1260 235 1210 315"
+          stroke-width="14"/>
+        <path d="M1190 300 Q1340 225 1415 275 Q1290 285 1205 335"
+          stroke-width="14"/>
+        <path d="M1190 300 Q1070 330 1040 410 Q1125 365 1200 340"
+          stroke-width="14"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="atmosphere-shade"></div>
+</div>
+
+
+  <header class="navbar">
+    <a class="brand" href="index.html"><span>#</span> HASHTAG</a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a class="active" href="contact.html">Contact Me</a>
+      <a href="support.html">Support</a>
+      <a class="btn btn-primary nav-cta" href="support.html">Support Me ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero container">
+      <span class="eyebrow">LET'S CONNECT</span>
+      <h1>Let's Build <span class="gradient-text">Something.</span></h1>
+      <p>Have a project in mind or just want to say hello? I'd love to hear from you.</p>
+    </section>
+
+    <section class="contact-layout container section">
+      <div class="contact-intro">
+        <span class="eyebrow">GET IN TOUCH</span>
+        <h2>Have an idea?<br>Let's make it <span class="gradient-text">real.</span></h2>
+        <p>Whether it's a website project, a collaboration or just a friendly hello, my inbox is open.</p>
+        <div class="contact-detail">
+          <span>✉</span>
+          <div><small>EMAIL</small><strong><a href="mailto:deeclercq@gmail.com?subject=Hello%20Hashtag">
+  Email Hashtag
+</a></strong></div>
+        </div>
+        <div class="contact-detail">
+          <span>💻</span>
+          <div><small>AVAILABILITY</small><strong>Open for website projects</strong></div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contact-form">
+        <h3>Send me a message.</h3>
+        <p>Fill in the details below.</p>
+
+        <label for="full-name">Full Name</label>
+        <input id="full-name" name="name" type="text" placeholder="Your full name" required maxlength="100">
+
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required maxlength="254">
+
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text" placeholder="What's on your mind?" required maxlength="150">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required maxlength="5000"></textarea>
+
+        <div class="form-feedback" id="form-feedback" role="status" aria-live="polite"></div>
+        <button class="btn btn-primary form-submit" type="submit">Send Message ↗</button>
+      </form>
+    </section>
+
+    <section class="section container services-section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">WHAT I CAN HELP WITH</span>
+          <h2>Let's create something <span class="gradient-text">great.</span></h2>
+          <p>Modern websites designed to make an impression.</p>
+        </div>
+      </div>
+      <div class="services-grid">
+        <article class="service-card"><span>✦</span><h3>Personal Websites</h3><p>A professional home for your personal brand.</p></article>
+        <article class="service-card"><span>◈</span><h3>Business Websites</h3><p>Give your business a strong online presence.</p></article>
+        <article class="service-card"><span>▤</span><h3>Portfolio Websites</h3><p>Showcase your work and stand out.</p></article>
+        <article class="service-card"><span>↗</span><h3>Landing Pages</h3><p>Focused pages built to drive action.</p></article>
+        <article class="service-card"><span>⟳</span><h3>Website Redesigns</h3><p>Give an existing website a fresh look.</p></article>
+      </div>
+      <div class="services-cta">
+        <h3>Have a project in mind?</h3>
+        <a href="#contact-form" class="btn btn-primary">Let's Talk ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><a class="brand" href="index.html"><span>#</span> HASHTAG</a><p>Big dreams. Small steps. Endless possibilities.</p></div>
+      <div class="footer-links"><a href="index.html">Home</a><a href="contact.html">Contact Me</a><a href="support.html">Support</a></div>
+      <div class="social-links">
+<a href="mailto:deeclercq@gmail.com?subject=Hello%20Hashtag">
+  Email Hashtag ↗
+</a> 
+<a
+    href="https://discord.com/users/YOUR_USER_ID"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="social-link"
+  >
+    Connect on Discord ↗
+  </a>
+     </div>
+     
+    </div>
+    <div class="container copyright"><span>© <span data-year></span> Hashtag. All rights reserved.</span></div>
+  </footer>
+</body>
+</html>

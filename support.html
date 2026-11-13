@@ -1,0 +1,630 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support Hashtag and help bring our gaming and technology goals to life. Every contribution makes a difference.">
+
+    <title>Support Hashtag | Make a Contribution</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Paystack Inline SDK -->
+    <script src="https://js.paystack.co/v2/inline.js"></script>
+
+<!-- Website scripts -->
+<script src="js/script.js" defer></script>
+<script src="js/dashboard.js" defer></script>
+<script src="js/support.js" defer></script>
+<link rel="stylesheet" href="css/atmosphere.css">
+<script src="js/atmosphere.js" defer></script>
+
+</head>
+
+<body class="support-page">
+
+  <div class="hashtag-atmosphere" aria-hidden="true">
+  <canvas id="lightfall-canvas"></canvas>
+
+  <div class="vice-artwork">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice"
+         xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="vice-sky" x1="0" y1="0" x2="0.8" y2="1">
+          <stop offset="0%" stop-color="#fa5d9b"/>
+          <stop offset="48%" stop-color="#a34e9b"/>
+          <stop offset="100%" stop-color="#24204c"/>
+        </linearGradient>
+        <linearGradient id="vice-water" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#f477a4"/>
+          <stop offset="100%" stop-color="#292452"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Sunset -->
+      <circle cx="1050" cy="360" r="190" fill="#ff9a85" opacity=".8"/>
+
+      <!-- Distant city skyline -->
+      <path d="M0 570 L0 480 65 480 65 420 115 420 115 490
+        170 490 170 390 220 390 220 470 275 470 275 430
+        330 430 330 510 390 510 390 455 450 455 450 520
+        510 520 510 450 565 450 565 520 630 520 630 470
+        690 470 690 530 760 530 760 450 815 450 815 500
+        880 500 880 440 930 440 930 520 990 520 990 460
+        1050 460 1050 530 1120 530 1120 420 1180 420
+        1180 510 1240 510 1240 455 1300 455 1300 520
+        1370 520 1370 465 1440 465 1440 900 0 900Z"
+        fill="#19152f" opacity=".8"/>
+
+      <!-- Water and sunset reflections -->
+      <path d="M0 650 Q360 620 720 655 T1440 640 L1440 900 L0 900Z"
+        fill="url(#vice-water)" opacity=".45"/>
+      <g stroke="#ffb1bd" stroke-width="4" opacity=".28">
+        <path d="M820 690 H1250"/>
+        <path d="M900 720 H1190"/>
+        <path d="M760 750 H1300"/>
+        <path d="M960 785 H1160"/>
+      </g>
+
+      <!-- Palm tree on the left -->
+      <g fill="none" stroke="#120f26" stroke-linecap="round">
+        <path d="M180 900 Q220 620 260 320" stroke-width="19"/>
+        <path d="M260 320 Q130 210 55 250 Q145 255 220 330"
+          stroke-width="13"/>
+        <path d="M260 320 Q260 190 350 150 Q315 240 280 330"
+          stroke-width="13"/>
+        <path d="M260 320 Q410 235 490 280 Q370 290 275 345"
+          stroke-width="13"/>
+        <path d="M260 320 Q120 320 80 410 Q170 370 275 350"
+          stroke-width="13"/>
+        <path d="M260 320 Q330 360 370 445 Q300 395 255 355"
+          stroke-width="13"/>
+      </g>
+
+      <!-- Palm tree on the right -->
+      <g fill="none" stroke="#120f26" stroke-linecap="round">
+        <path d="M1280 900 Q1230 620 1190 300" stroke-width="20"/>
+        <path d="M1190 300 Q1060 190 990 235 Q1090 245 1175 320"
+          stroke-width="14"/>
+        <path d="M1190 300 Q1200 175 1300 130 Q1260 235 1210 315"
+          stroke-width="14"/>
+        <path d="M1190 300 Q1340 225 1415 275 Q1290 285 1205 335"
+          stroke-width="14"/>
+        <path d="M1190 300 Q1070 330 1040 410 Q1125 365 1200 340"
+          stroke-width="14"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="atmosphere-shade"></div>
+</div>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-hash">#</span>Hashtag
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="main-nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="support.html" class="active nav-cta">Support Us</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Page Hero -->
+    <main>
+
+        <section class="page-hero support-hero">
+            <div class="container">
+
+                <span class="eyebrow">BE PART OF THE JOURNEY</span>
+
+                <h1>
+                    Help Us Make
+                    <span class="gradient-text">It Happen.</span>
+                </h1>
+
+                <p>
+                    Every contribution brings us one step closer to our goals.
+                    Choose a goal, select an amount, and help make it happen.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- Contribution and Dashboard -->
+        <section class="support-section">
+            <div class="container">
+
+                <div class="payment-layout">
+
+                    <!-- Main Contribution Area -->
+                    <div class="payment-main">
+
+                        <!-- Contribution Form -->
+                        <div class="payment-card contribution-card">
+
+                            <span class="eyebrow">MAKE A CONTRIBUTION</span>
+
+                            <h2>Choose Your Contribution</h2>
+
+                            <p class="card-description">
+                                Select what you would like to support and decide
+                                how much you want to contribute.
+                            </p>
+
+
+                            <!-- Goal Selection -->
+                            <div class="form-group">
+
+                                <label for="contribution-goal">
+                                    What would you like to support?
+                                </label>
+
+                                <select id="contribution-goal" name="goalId">
+
+                                    <option value="all">
+                                        All Goals, Share My Contribution
+                                    </option>
+
+                                    <option value="ps5">
+                                        PlayStation 5 Pro — $899.00
+                                    </option>
+
+                                    <option value="gta6">
+                                        Grand Theft Auto VI — $79.99
+                                    </option>
+
+                                    <option value="monitor">
+                                        Samsung Odyssey G7 Monitor — $499.99
+                                    </option>
+
+                                </select>
+
+                                <small class="form-hint">
+                                    Selecting All Goals distributes your
+                                    contribution proportionally across all three goals.
+                                </small>
+
+                            </div>
+
+
+                            <!-- Amount Selection -->
+                            <div class="form-group">
+
+                                <label>
+                                    Choose your contribution amount
+                                </label>
+
+                                <div class="amount-options">
+
+                                    <button
+                                        type="button"
+                                        class="amount-option"
+                                        data-amount="1"
+                                    >
+                                        $1
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="amount-option active"
+                                        data-amount="5"
+                                    >
+                                        $5
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="amount-option"
+                                        data-amount="10"
+                                    >
+                                        $10
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="amount-option"
+                                        data-amount="20"
+                                    >
+                                        $20
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Custom Amount -->
+                            <div class="form-group">
+
+                                <label for="custom-amount">
+                                    Or enter a custom amount (USD)
+                                </label>
+
+                                
+<div class="amount-input-wrapper">
+
+    <span class="currency-symbol">$</span>
+
+    <input
+        type="number"
+        id="custom-amount"
+        name="amount"
+        value="5"
+        min="1"
+        max="100000"
+        step="1"
+        inputmode="decimal"
+        required
+    >
+
+    <button
+        type="button"
+        class="amount-stepper"
+        data-step="-1"
+        aria-label="Decrease contribution amount"
+    >−</button>
+
+    <button
+        type="button"
+        class="amount-stepper"
+        data-step="1"
+        aria-label="Increase contribution amount"
+    >+</button>
+
+</div>
+
+
+                            </div>
+
+
+                            <!-- Selected Amount -->
+                            <div class="selected-amount-box">
+
+                                <span>Your contribution</span>
+
+                                <strong id="selected-amount">$5.00</strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Pay Now Section -->
+                        <div class="payment-card pay-now-card">
+
+                            <span class="eyebrow">READY TO MAKE A DIFFERENCE?</span>
+
+                            <h2>Your Support Means Everything.</h2>
+
+                            <p class="card-description">
+                                Thank you for supporting Hashtag. Your contribution
+                                will help bring these fundraising goals closer.
+                            </p>
+
+
+
+                            <button
+                                type="button"
+                                class="btn btn-primary form-submit"
+                                id="pay-now"
+                            >
+                                Pay Now →
+                            </button>
+
+                            <p
+                                id="payment-message"
+                                role="status"
+                                aria-live="polite">
+                            </p>
+                            
+
+                            <p class="payment-security-note">
+                                Your contribution is greatly appreciated.
+                                Thank you for being part of the Hashtag journey.
+                            </p>
+                            <p class="exchange-rate-credit">
+                                Exchange rates provided by
+                                <a
+                                    href="https://www.exchangerate-api.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    ExchangeRate-API
+                                </a>.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Fundraising Dashboard -->
+                    <aside class="payment-sidebar goals-dashboard">
+
+                        <div class="dashboard-heading">
+
+                            <span class="eyebrow">OUR PROGRESS</span>
+
+                            <h2>Fundraising Dashboard</h2>
+
+                            <p>
+                                Follow our progress as we work towards each goal.
+                            </p>
+
+                        </div>
+
+
+                        <!-- Overall Progress -->
+                        <div class="dashboard-card total-progress-card">
+
+                            <div class="dashboard-card-header">
+
+                                <div>
+                                    <span class="dashboard-label">
+                                        TOTAL RAISED
+                                    </span>
+
+                                    <h3 data-total-raised>$0.00</h3>
+                                </div>
+
+                                <span class="dashboard-icon">🎯</span>
+
+                            </div>
+
+                            <div class="progress-track">
+                                <div
+                                    class="progress-fill"
+                                    data-progress-bar
+                                    style="width: 0%;"
+                                ></div>
+                            </div>
+
+                            <div class="progress-details">
+
+                                <span data-progress-percent>0%</span>
+
+                                <span>
+                                    Target:
+                                    <strong data-total-target>$1,478.98</strong>
+                                </span>
+
+                            </div>
+
+                            <p class="remaining-amount">
+                                <span data-total-remaining>
+                                    $1,478.98 remaining
+                                </span>
+                            </p>
+
+                        </div>
+
+
+                        <!-- PS5 Pro -->
+                        <div class="dashboard-card goal-progress-card">
+
+                            <div class="goal-card-heading">
+
+                                <div>
+                                    <span class="dashboard-label">
+                                        PlayStation 5 Pro
+                                    </span>
+                                </div>
+
+                                <span class="goal-icon">🎮</span>
+
+                            </div>
+
+                            <div class="goal-amounts">
+
+                                <strong data-goal-raised="ps5">$0.00</strong>
+
+                                <span>of $899.00</span>
+
+                            </div>
+
+                            <div class="progress-track">
+                                <div
+                                    class="progress-fill"
+                                    data-goal-bar="ps5"
+                                    style="width: 0%;"
+                                ></div>
+                            </div>
+
+                            <div class="progress-details">
+                                <span data-goal-percent="ps5">0%</span>
+                                <span>$899.00 target</span>
+                            </div>
+
+                        </div>
+
+
+                        <!-- GTA VI -->
+                        <div class="dashboard-card goal-progress-card">
+
+                            <div class="goal-card-heading">
+
+                                <div>
+                                    <span class="dashboard-label">
+                                        Grand Theft Auto VI
+                                    </span>
+                                </div>
+
+                                <span class="goal-icon">🇻🇮</span>
+
+                            </div>
+
+                            <div class="goal-amounts">
+
+                                <strong data-goal-raised="gta6">$0.00</strong>
+
+                                <span>of $79.99</span>
+
+                            </div>
+
+                            <div class="progress-track">
+                                <div
+                                    class="progress-fill"
+                                    data-goal-bar="gta6"
+                                    style="width: 0%;"
+                                ></div>
+                            </div>
+
+                            <div class="progress-details">
+                                <span data-goal-percent="gta6">0%</span>
+                                <span>$79.99 target</span>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Samsung Monitor -->
+                        <div class="dashboard-card goal-progress-card">
+
+                            <div class="goal-card-heading">
+
+                                <div>
+                                    <span class="dashboard-label">
+                                        Samsung Odyssey G7
+                                    </span>
+                                </div>
+
+                                <span class="goal-icon">🖥️</span>
+
+                            </div>
+
+                            <div class="goal-amounts">
+
+                                <strong data-goal-raised="monitor">$0.00</strong>
+
+                                <span>of $499.99</span>
+
+                            </div>
+
+                            <div class="progress-track">
+                                <div
+                                    class="progress-fill"
+                                    data-goal-bar="monitor"
+                                    style="width: 0%;"
+                                ></div>
+                            </div>
+
+                            <div class="progress-details">
+                                <span data-goal-percent="monitor">0%</span>
+                                <span>$499.99 target</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="dashboard-note">
+                            <span aria-hidden="true">💜</span>
+
+                            <p>
+                                Every contribution counts. Thank you for helping
+                                make these goals possible.
+                            </p>
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    <span class="logo-hash">#</span>Hashtag
+                </a>
+
+                <p>
+                    Building ideas, creating experiences, and making things happen.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Explore</h3>
+
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="support.html">Support Us</a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>Get in Touch</h3>
+
+              <a href="mailto:deeclercq@gmail.com?subject=Hello%20Hashtag">
+                Email Hashtag ↗
+              </a> 
+
+              <a
+                href="https://discord.com/users/YOUR_USER_ID"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link">
+                Connect on Discord ↗
+              </a> 
+
+
+            </div>
+
+        </div>
+
+
+        <div class="container copyright">
+
+            <span>
+                &copy; <span id="current-year"></span> Hashtag.
+                All rights reserved.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+        // Automatically update the copyright year.
+        document.getElementById("current-year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>

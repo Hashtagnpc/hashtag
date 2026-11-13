@@ -1,0 +1,105 @@
+/* =========================================
+   HASHTAG — VICE CITY ATMOSPHERE
+   Background artwork and Lightfall
+========================================= */
+
+.hashtag-atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 75% 15%, rgba(130, 55, 110, .12), transparent 45%),
+    #0b0b13;
+}
+
+#lightfall-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: .72;
+}
+
+.vice-artwork {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 4s ease-in-out;
+  will-change: opacity;
+}
+
+.vice-artwork.visible {
+  opacity: .19;
+}
+
+.vice-artwork svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.atmosphere-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(11, 11, 19, .22) 0%,
+      rgba(11, 11, 19, .45) 48%,
+      rgba(11, 11, 19, .88) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(11, 11, 19, .52),
+      transparent 55%,
+      rgba(11, 11, 19, .35)
+    );
+}
+
+/* Keep every existing website section above the background */
+
+body > *:not(.hashtag-atmosphere) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Keep the background from affecting page interaction */
+
+.hashtag-atmosphere,
+.hashtag-atmosphere * {
+  pointer-events: none;
+}
+
+/* Mobile optimization */
+
+@media (max-width: 768px) {
+  #lightfall-canvas {
+    opacity: .52;
+  }
+
+  .vice-artwork.visible {
+    opacity: .13;
+  }
+
+  .atmosphere-shade {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(11, 11, 19, .35),
+        rgba(11, 11, 19, .78)
+      );
+  }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .vice-artwork {
+    transition: none;
+  }
+}
