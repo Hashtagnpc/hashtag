@@ -20,8 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // IMPORTANT:
     // This is your computer's local network IP address.
     // Your phone uses this address to reach your backend.
-    const API_BASE_URL = "http://192.168.0.172:3000/api/payments";
-
+const API_BASE_URL = "https://hashtag-backend-5vap.onrender.com/api/payments";
     if (!amountInput || !selectedAmount) {
         console.error("Contribution amount elements were not found.");
         return;
